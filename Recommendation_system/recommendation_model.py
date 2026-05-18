@@ -39,20 +39,9 @@ def get_recommendations(product, top_n=3):
              }
 
 
-user_item_matrix = pd.read_parquet(
-    "Recommendation_system/useritem_matrix.parquet"
-)
+user_item_matrix = pd.read_parquet("Recommendation_system/useritem_matrix.parquet")
+item_similarity_df = pd.read_parquet("Recommendation_system/itemsimilarity_df.parquet")
 
-
-# Generate item-item similarity dynamically becz it is of huge size deployment fails due to memory constraints. This way we can compute similarity on the fly without storing the huge matrix.
-item_similarity = cosine_similarity(user_item_matrix.T)
-
-# Convert to dataframe
-item_similarity_df = pd.DataFrame(
-    item_similarity,
-    index=user_item_matrix.columns,
-    columns=user_item_matrix.columns
-)
 def recommendation_cf(product,top_n=3):
 
     if product not in user_item_matrix.columns:

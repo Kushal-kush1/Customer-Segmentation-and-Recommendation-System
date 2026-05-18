@@ -22,7 +22,7 @@ if page == "Customer Persona Prediction":
 
     # B. Define where your FastAPI server is listening
     def fetch_predictions(payload):
-        API_URL = "https://customer-segmentation-production-abe8.up.railway.app/predict"  # Update with your actual API endpoint
+        API_URL = "https://customer-segmentation-product-recommendation.up.railway.app/predict"  # Update with your actual API endpoint
         try:
             response = requests.post(API_URL, json=payload)
             if response.status_code == 200:
@@ -232,7 +232,7 @@ elif page == "🛒 Smart Recommendations":
     #@st.cache_data
     def load_products():
         try:
-            res = requests.get("https://customer-segmentation-production-abe8.up.railway.app/products")
+            res = requests.get("https://customer-segmentation-product-recommendation.up.railway.app/products")
             return res.json()["products"]
         except:
             return []
@@ -259,7 +259,7 @@ elif page == "🛒 Smart Recommendations":
 
             try:
                 res = requests.get(
-                    "https://customer-segmentation-production-abe8.up.railway.app/recommend",
+                    "https://customer-segmentation-product-recommendation.up.railway.app/recommend",
                     params={"product_name": product, "top_n": top_n}
                 )
 
