@@ -219,7 +219,7 @@ This repository includes:
 
 The original datasets have been excluded to keep the repository lightweight and focused on deployment and reproducibility.
 
-To reproduce the training process, download the dataset from the source link above and place it in the appropriate project directory.
+### To reproduce the training process, download the dataset from the source link above and place it in the appropriate project directory.
 ---
 
 ## Application Screenshots
@@ -401,11 +401,6 @@ docker run -p 8000:8000 customer-segmentation
 ## Author
 
 ### Kushal K N
-
-Electronics & Communication Engineering Graduate
-
-Executive Program in Data Science & AI
-(E&ICT Academy IIT Guwahati × Learnbay)
 
 Passionate about Data Analytics, Machine Learning, Artificial Intelligence, Recommendation Systems, and solving real-world business problems through data.
 
