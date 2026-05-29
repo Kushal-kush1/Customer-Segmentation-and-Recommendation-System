@@ -1,19 +1,18 @@
 # Customer Segmentation & Product Recommendation System
 
-## Overview
+The system implements an end-to-end machine learning pipeline that transforms raw retail transaction data into actionable customer insights and personalized product recommendations.
 
-An end-to-end Machine Learning application that combines Customer Segmentation and Product Recommendation to help businesses understand customer behavior and deliver personalized product suggestions.
+Key components include:
 
-The system implements:
-
-* K-Means Clustering for Customer Segmentation
-* Apriori Algorithm for Association Rule Mining
-* Collaborative Filtering using Cosine Similarity
-* Hybrid Product Recommendation System
-* FastAPI Backend Services
-* Streamlit Interactive Frontend
-* Dockerized Cloud Deployment
-
+- ETL Pipeline for transaction data processing
+- RFM (Recency, Frequency, Monetary) feature engineering
+- K-Means Clustering for customer segmentation
+- Apriori Algorithm for association rule mining
+- Collaborative Filtering using Cosine Similarity
+- Hybrid recommendation engine
+- FastAPI backend services
+- Streamlit interactive frontend
+- Dockerized cloud deployment
 ---
 
 ## Live Applications
@@ -30,19 +29,34 @@ https://customer-segmentation-product-recommendation.up.railway.app/docs
 
 ## Project Architecture
 
-Customer Data
-↓
-Data Preprocessing & Feature Engineering
-↓
-Customer Segmentation (K-Means Clustering)
-↓
-Customer Segment Prediction
-↓
-Hybrid Recommendation Engine
-├── Apriori Association Rules
-└── Collaborative Filtering (Cosine Similarity)
-↓
-Personalized Product Recommendations
+```text
+Online Retail Transaction Data
+                │
+                ▼
+      ETL & Data Preprocessing
+                │
+                ▼
+     RFM Feature Engineering
+(Recency, Frequency, Monetary)
+                │
+                ▼
+      K-Means Clustering
+                │
+                ▼
+   Customer Segment Prediction
+                │
+                ▼
+     Hybrid Recommendation Engine
+           /               \
+          /                 \
+         ▼                   ▼
+Apriori Association     Collaborative Filtering
+Rule Mining             (Cosine Similarity)
+         \                   /
+          \                 /
+           ▼               ▼
+      Product Recommendations
+```
 
 ---
 
@@ -50,11 +64,11 @@ Personalized Product Recommendations
 
 ### Customer Segmentation
 
-* Data preprocessing and feature engineering
+* ETL pipeline for transforming raw transaction data
+* RFM (Recency, Frequency, Monetary) feature engineering
+* Customer behavior analysis using purchasing patterns
 * K-Means clustering model
-* Customer behavior analysis
 * Real-time customer segment prediction
-* Interactive visualization and prediction interface
 
 ### Product Recommendation
 
