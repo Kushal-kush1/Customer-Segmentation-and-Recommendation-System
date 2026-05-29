@@ -127,33 +127,85 @@ Personalized Product Recommendations
 
 ## Project Structure
 
+```text
 Customer-Segmentation-and-Recommendation-System
-
+│
 ├── appui.py
 ├── main.py
 ├── Dockerfile
 ├── requirements.txt
 ├── README.md
+│
+├── customer_segmentation/
+│   ├── customer_segmentation.pkl
+│   ├── Customer_Segmentation_Final.csv
+│   ├── ETL_transformer.py
+│   ├── model_loader.py
+│   └── schema.py
+│
+├── Recommendation_system/
+│   ├── recommendation_model.py
+│   ├── apriori_bestrules.csv
+│   ├── itemsimilarity_df.parquet
+│   └── useritem_matrix.parquet
+│
+├── notebooks/
+│   ├── customer_segmentation.ipynb
+│   └── recommendation_system.ipynb
+│
+└── images/
+    ├── segmentaion_ui.png
+    ├── segmentation_predictions_ui.png
+    ├── product_recommendation_ui.png
+    ├── product_recommendation_prediction_ui.png
+    └── swagger_api.jpeg
+```
+---
+## Dataset Information
 
-├── customer_segmentation
-│ ├── customer_segmentation.pkl
-│ ├── Customer_Segmentation_Final.csv
-│ ├── ETL_transformer.py
-│ ├── model_loader.py
-│ └── schema.py
+The original training datasets are not included in this repository due to their large size and GitHub storage limitations.
 
-├── Recommendation_system
-│ ├── recommendation_model.py
-│ ├── apriori_bestrules.csv
-│ ├── itemsimilarity_df.parquet
-│ └── useritem_matrix.parquet
+### Dataset Used
 
-├── notebooks
-│ ├── customer_segmentation.ipynb
-│ └── recommendation_system.ipynb
+**Online Retail II UCI Dataset**
 
-└── images
+Dataset Source:
+https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci
 
+### Dataset Description
+
+The Online Retail II dataset contains transactional data from a UK-based online retail store. The dataset includes:
+
+* Customer IDs
+* Invoice Numbers
+* Product Descriptions
+* Quantity Purchased
+* Unit Prices
+* Transaction Dates
+* Country Information
+
+The dataset was used for:
+
+* Customer Segmentation using K-Means Clustering
+* Market Basket Analysis
+* Apriori Association Rule Mining
+* Collaborative Filtering using Cosine Similarity
+* Product Recommendation System Development
+
+### Repository Contents
+
+This repository includes:
+
+* Trained Machine Learning Models
+* Recommendation Artifacts
+* Feature Engineering Pipeline
+* Deployment-Ready Application Code
+* API Services
+* Frontend Interface
+
+The original datasets have been excluded to keep the repository lightweight and focused on deployment and reproducibility.
+
+To reproduce the training process, download the dataset from the source link above and place it in the appropriate project directory.
 ---
 
 ## Application Screenshots
